@@ -1,8 +1,12 @@
 /* GENERAL */
 body {
-	background-color: rgb(250, 215, 220);
+	background-color: rgb(255, 255, 255);
 }
 
+.main {
+	display: block;
+	background-color: aqua;
+}
 .container {
 	background-color: white;
 	border-bottom-left-radius: 2rem;
