@@ -11,7 +11,7 @@ body {
 	background-color: white;
 	border-bottom-left-radius: 2rem;
 	border-bottom-right-radius: 2rem;
-	border: 0.2rem solid black;
+	border: 0.2rem solid white;
     box-shadow: 0 0 10px 10px white;
     width: 90%;
 	margin: 0 auto 5rem auto;
@@ -65,7 +65,7 @@ svg {
 	padding: 0.0px 100px;
 	border: 0.2rem solid black;
 	border-radius: 2rem;
-	background-color: lightpink;
+	background-color: white;
 	box-shadow: 0 0 0.2rem 0.2rem rgb(255, 192, 203, 0.4);
 }
 
