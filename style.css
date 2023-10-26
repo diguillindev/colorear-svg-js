@@ -107,11 +107,11 @@ svg {
 #brown {
 	background-color: #51251E;
 }
-#ochre  {
-	background-color: #67664D;
+#grey  {
+	background-color:grey;
 }
-#skin {
-	background-color: #F5CA83;
+#skin  {
+	background-color: #e0ac69;
 }
 #pink  {
 	background-color: #C93852;
@@ -120,7 +120,7 @@ svg {
 	background-color: #9B130D;
 }
 #watermelon  {
-	background-color: #B73C2D;
+	background-color: pink;
 }
 #orange {
 	background-color: #DB5300;
