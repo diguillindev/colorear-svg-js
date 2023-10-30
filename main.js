@@ -95,4 +95,5 @@ const game = {
   
     document.body.style.cursor = $svgCursor
   }
+
   
