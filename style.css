@@ -1,197 +1,147 @@
-/* GENERAL */
-body {
-	background-color: rgb(255, 255, 255);
-}
-
-.main {
-	display: block;
-	background-color: aqua;
+.container {
+  display: flex;
+  justify-content: center;
+  padding-top: 0px;
 }
 
 svg {
-	display: block;
-	margin: 0 auto;
-    width: 25%;
+  height: 570px;
+  width: 560px;
 }
 
-/* path {
-	fill: red !important;
-} */
-
-/* DROPDOWN */
 .dropdown {
-	position: relative;
-	display: inline-block;
-	width: 100%;
-	margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 1rem;
 }
 
 .dropdown-content {
-	display: none;
-	position: absolute;
-	background-color: #f9f9f9;
-	min-width: 90%;
-	min-height: 100%;
-	box-shadow: 0 0.5rem 0.2rem 0.2rem rgb(255, 192, 203, 0.4);
-	border: 1px solid black;
-	border-radius: 2rem;
-	padding: 1rem;
-	margin: auto;
-	/* top: 0; bottom: 0;  */
-	left: 0; 
-	right: 0;
-	z-index: 1;
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 90%;
+  height: 50vh; /* Establecer la altura al 50% de la altura de la ventana (viewport height) */
+  box-shadow: 0 0.5rem 0.2rem 0.2rem rgba(255, 192, 203, 0.4);
+  border: 1px solid black;
+  border-radius: 2rem;
+  padding: 1rem;
+  margin: auto;
+  left: 0;
+  right: 0;
+  z-index: 1;
 }
 
+img {
+  display: inline-block;
+  max-width: 100%;
+  height: 100%;
+  width: auto;
+}
+
+
 .dropdown:hover .dropdown-content {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	grid-gap: 1.5rem;
+  display: flex;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 3.5rem;
 }
 
 .dropdown button {
-	display: block;
-	margin: 0 auto;
-	padding: 0.0px 100px;
-	border: 0.2rem solid black;
-	border-radius: 2rem;
-	background-color: white;
-	box-shadow: 0 0 0.2rem 0.2rem rgb(255, 192, 203, 0.4);
+  display: block;
+  margin: 0 auto;
+  padding: 0px 100px;
+  border: 0.2rem solid black;
+  border-radius: 2rem;
+  background-color: white;
+  box-shadow: 0 0 0.2rem 0.2rem rgb(255, 192, 203, 0.4);
 }
 
-.dropdown button:hover, .dropdown button:active {
-	background-color: white;
+.dropdown button:hover,
+.dropdown button:active {
+  background-color: white;
 }
 
-/* TINY IMAGES */
-.tiny-images div {
-	border: 1px solid black;
-	border-radius: 1rem;
-	background-color: rgb(240, 76, 76);
-	transition: transform .2s;
+.div2 {
+  background-color: #ffffff;
+  width: 50px;
+  height: 500px;
+  padding: 35px;
 }
-.tiny-images div img {
-    max-width: 100%; /* Las imágenes no superarán el ancho de su contenedor */
-    height: auto; /* La altura se ajustará automáticamente para mantener la proporción */
+.controls__colors {
+  display: flex;
+  flex-direction: column; /* Elementos en una sola columna */
+  align-items: center; /* Alinea verticalmente en el centro */
+  flex-wrap: wrap; /* Fuerza una sola columna */
 }
-
-.tiny-images div:hover {
-	transform: scale(1.05);
-	background-color: white;
-	box-shadow: 0 0.2rem 0.2rem 0.2rem rgb(255, 192, 203, 0.4);
-}
-
-
-/* COLOR PALETTE */
-#palette {
-	width: 100%;
-	height: 7rem;
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	border: 0.1rem solid black;
-	box-sizing: border-box;
+.controls__color {
+  width: 50px;
+  height: 50px;
+  border-radius: 70%; /* Convierte los elementos en círculos */
+  margin-right: 10px; /* Espacio entre los colores */
 }
 
-#palette div {
-	width: 100%;
-	height: 100%;
-	border: 0.1rem solid black;
-	box-sizing: border-box;
-}
+/* Media query para pantallas más pequeñas (móviles) */
+@media (max-width: 768px) {
+  .body {
+    margin-right: 35px;
+  }
+  .container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 40px;
+  }
 
-#palette div:hover {
-	box-shadow: inset 0 0 0 10px black;
-}
+  h2 {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+  }
 
-#brown {
-	background-color: #51251E;
-}
-#grey  {
-	background-color:grey;
-}
-#beige  {
-	background-color: rgb(236, 236, 138);
-}
-#pink  {
-	background-color: #C93852;
-}
-#red {
-	background-color: #9b130d;
-}
-#crimson  {
-	background-color: crimson;
-}
-#orange {
-	background-color: #DB5300;
-}
-#yellow  {
-	background-color: #F0BD02;
-}
-#green {
-	background-color: #059E28;
-}
-#skyblue {
-	background-color: #0078BF;
-}
-#lightblue {
-	background-color: #529ED4;
-}
-#blue  {
-	background-color: #00227E;
-}
-.selected {
-	box-shadow: inset 0 0 0 5px black;
-}
+  .dropdown button {
+    width: 50%;
+    height: 50%;
+  }
 
-/* MEDIA QUERIES */
-@media (min-width: 650px) {
-	svg {
-		width: 70vw;
-	}
+  .dropdown:hover .dropdown-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.5rem;
+    min-width: 90%;
+  }
+
+  .tiny-images div {
+    border: 1px solid black;
+    border-radius: 1rem;
+    background-color: rgb(255, 255, 255);
+    transition: transform 0.2s;
+  }
+
+  img {
+    display: inline-block;
+    max-width: 90%;
+    height: 100%;
+    width: auto;
+    padding: 6.5px;
+  }
+
+  svg {
+    width: 100%; /* Ancho completo para que se ajuste a la pantalla móvil */
+    height: 340px; /* Altura automática para adaptarse al contenido */
+    padding: 0px; /* Puedes reducir el relleno si es necesario */
+  }
+
+  .div2 {
+    width: 100%; /* Ancho completo para ambos divs en dispositivos móviles */
+    height: 95px;
+  }
+
+  .controls__colors {
+    flex-direction: row; /* Cambiar a dirección de fila para los colores en dispositivos móviles */
+    align-items: center; /* Centrar los colores horizontalmente */
+  }
+
+  #jsColors {
+    margin-left: 30px;
+  }
 }
-
-@media (min-width: 900px) {
-	main {
-		display: grid;
-		grid-template-columns: 30% 70%;
-		grid-template-areas: "palette svg";
-	}
-
-	h2 {
-		text-align: left;
-		padding: 0 0.5rem;
-	}
-
-	.dropdown:hover .dropdown-content {
-		grid-template-columns: repeat(4, 1fr);
-		grid-gap: 3.5rem;
-	}
-
-	svg {
-		grid-area: svg;
-		width: 50vw;
-	}
-
-	#paletteBox {
-		grid-area: palette;
-		padding: 1rem;
-	}
-
-	#paletteBox h2 {
-		text-align: center;
-	}
-
-	#palette {
-		width: 25vw;
-		height: 50vw;
-		grid-template-columns: 1fr 1fr;
-	}
-
-}
-
-@media (min-width: 1100px) {
-	#palette {
-		width: 20vw;
-	}
-}
-
