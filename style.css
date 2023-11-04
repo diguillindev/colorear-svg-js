@@ -39,7 +39,6 @@ img {
   width: auto;
 }
 
-
 .dropdown:hover .dropdown-content {
   display: flex;
   grid-template-columns: repeat(2, 1fr);

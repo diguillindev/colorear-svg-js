@@ -53,7 +53,7 @@ for (let i = 0; i < $controlColors.length; i++) {
   });
 }
 
-// SELECT ANY 
+// SELECT ANY IMG
 
 const $tinyImages = document.querySelector(".tiny-images");
 
@@ -113,3 +113,19 @@ function changeCursor() {
 
   document.body.style.cursor = $svgCursor;
 }
+
+// TOUR MAP
+const driver = window.driver.js.driver;
+
+const driverObj = driver({
+  showProgress: true,
+  steps: [
+    { element: '#my-button', popover: { title: 'Paso1', description: 'Elige entre nuestras obras'} },
+    { element: '#jsColors', popover: { title: 'Paso2', description: 'Toca un color y...¡A pintar!' } },
+  ],
+  nextBtnText: 'Siguiente', // Cambia el texto del botón "Next"
+  prevBtnText: 'Anterior', // Cambia el texto del botón "Previous"
+  doneBtnText: 'Cerrar', // Cambia el texto del botón "Done"
+});
+
+driverObj.drive();
