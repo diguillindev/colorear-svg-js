@@ -4,7 +4,7 @@ const driverObj = driver({
   showProgress: true,
   steps: [
     { element: '#my-button', popover: { title: 'Paso1', description: 'Elige entre nuestras obras'} },
-    { element: '#paletteBox', popover: { title: 'Paso2', description: 'Toca un color y...¡A pintar!' } },
+    { element: '#jsColors', popover: { title: 'Paso2', description: 'Toca un color y...¡A pintar!' } },
   ],
   nextBtnText: 'Siguiente', // Cambia el texto del botón "Next"
   prevBtnText: 'Anterior', // Cambia el texto del botón "Previous"
