@@ -9,6 +9,8 @@ header {
 }
 
 .container {
+  width: 100vw;
+  height: fit-content;
   display: flex;
   position: relative;
   justify-content: center;
@@ -30,7 +32,7 @@ svg {
   position: relative;
   display: inline-block;
   text-align: center;
-  margin-left: 85vh;
+  margin-left: 78vh;
   padding: 16px 90px;
   border: none;
   border-radius: 2rem;
